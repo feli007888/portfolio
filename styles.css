@@ -10,7 +10,7 @@ body {
 }
 
 .barra-navegacion {
-    background-color: #212529;
+    background-color: #24533D;
     padding: 16px;
     text-align: center;
 }
@@ -27,6 +27,11 @@ body {
 
 footer {
     margin-top: auto;
+}
+
+.footer-principal {
+    background-color: #24533D;
+    color: #ffffff;
 }
 
 .imagen-principal {
@@ -46,7 +51,18 @@ img {
 .icono-footer {
     width: 28px;
     height: 28px;
+}
+
+.icono-instagram {
+    filter: invert(28%) sepia(56%) saturate(3000%) hue-rotate(288deg) brightness(90%) contrast(93%);
+}
+
+.icono-github {
     filter: invert(1);
+}
+
+.icono-linkedin {
+    filter: invert(39%) sepia(83%) saturate(851%) hue-rotate(164deg) brightness(88%) contrast(101%);
 }
 
 .titulo-proyectos {
