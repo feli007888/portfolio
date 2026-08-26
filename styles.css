@@ -1,0 +1,54 @@
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.barra-navegacion {
+    background-color: #212529;
+    padding: 16px;
+    text-align: center;
+}
+
+.barra-navegacion a {
+    color: white;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+.barra-navegacion a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.imagen-principal {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+img {
+    border-radius: 16px;
+}
+
+.imagen-proyecto {
+    width: 250px;
+}
+
+.icono-footer {
+    width: 28px;
+    height: 28px;
+    filter: invert(1);
+}
+
+.titulo-proyectos {
+    margin-top: 80px;
+}
