@@ -1,18 +1,23 @@
 html,
 body {
     min-height: 100%;
+    
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #12243A;
 }
 
 .barra-navegacion {
-    background-color: #24533D;
-    padding: 16px;
+    background-color: #0F172A;
+    padding: 25px;
     text-align: center;
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 20px;
 }
 
 .barra-navegacion a {
@@ -30,7 +35,7 @@ footer {
 }
 
 .footer-principal {
-    background-color: #24533D;
+    background-color: #0F172A;
     color: #ffffff;
 }
 
@@ -45,7 +50,9 @@ img {
 }
 
 .imagen-proyecto {
-    width: 250px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 .icono-footer {
@@ -54,7 +61,7 @@ img {
 }
 
 .icono-instagram {
-    filter: invert(28%) sepia(56%) saturate(3000%) hue-rotate(288deg) brightness(90%) contrast(93%);
+    filter: invert(1);
 }
 
 .icono-github {
@@ -62,9 +69,40 @@ img {
 }
 
 .icono-linkedin {
-    filter: invert(39%) sepia(83%) saturate(851%) hue-rotate(164deg) brightness(88%) contrast(101%);
+    filter: invert(1);
 }
 
 .titulo-proyectos {
     margin-top: 80px;
+    color: #ffffff;
+}
+
+section {
+    min-height: 100vh;
+    padding: 50px;
+}
+
+#yo {
+    background-color: #12243A;
+}
+#s {
+    background-color: #12243A;
+}
+
+#proyectos {
+    background-color: #12243A
+}
+
+#contactos {
+    background-color: #12243A;
+}
+
+
+section + section::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 4px;
+    margin: 0 auto 50px;
+    background-color: #0F172A;
 }
