@@ -45,6 +45,11 @@ footer {
     object-fit: cover;
 }
 
+.hero-name {
+    font-size: 144px;
+    margin-left: 80px;
+}
+
 img {
     border-radius: 16px;
 }
