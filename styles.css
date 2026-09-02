@@ -8,16 +8,21 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+body.modo-oscuro {
     background-color: #0F172A;
+    color-scheme: dark;
 }
 
 .barra-navegacion {
-    background-color: #0F172A;
+    background-color: #1E293B;
     padding: 25px;
     text-align: center;
     width: fit-content;
     margin: 20px auto;
     border-radius: 20px;
+    border: 1px solid rgba(147, 197, 253, 0.22);
 }
 
 .barra-navegacion a {
@@ -28,6 +33,36 @@ body {
 
 .barra-navegacion a:hover {
     text-decoration: underline;
+}
+
+.boton-tema {
+    margin-left: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgba(147, 197, 253, 0.45);
+    border-radius: 10px;
+    background: transparent;
+    color: #ffffff;
+    font: inherit;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boton-tema:hover {
+    background-color: rgba(147, 197, 253, 0.16);
+}
+
+.boton-tema:focus-visible {
+    outline: 3px solid #93C5FD;
+    outline-offset: 3px;
+}
+
+.icono-tema {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    filter: invert(1);
 }
 
 footer {
@@ -43,11 +78,25 @@ footer {
     width: 100%;
     height: 500px;
     object-fit: cover;
+    border: 1px solid rgba(147, 197, 253, 0.4);
 }
 
 .hero-name {
-    font-size: 144px;
+    font-size: clamp(4.5rem, 10vw, 9rem);
     margin-left: 80px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+}
+
+#sobre-mi {
+    margin: 0;
+    color: #93C5FD;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 img {
@@ -78,8 +127,10 @@ img {
 }
 
 .titulo-proyectos {
-    margin-top: 80px;
+    margin: 0;
     color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
 }
 
 section {
@@ -92,11 +143,11 @@ section {
 #yo {
     background-color: #12243A;
 }
-#s {
+#habilidades {
     background-color: #12243A;
 }
 
-.skills-section {
+.habilidades{
     display: flex;
     align-items: center;
 }
@@ -158,26 +209,211 @@ section {
     line-height: 1.6;
 }
 
-@media (max-width: 767.98px) {
-    section {
-        margin: 0 12px 12px;
-        border-radius: 16px;
-    }
-
-    .skills-section {
-        padding: 50px 24px;
-    }
-
-    .skill-card .card-body {
-        min-height: 180px;
-    }
-}
-
 #proyectos {
-    background-color: #12243A
-}
-
-#contactos {
     background-color: #12243A;
 }
 
+#proyectos > a {
+    display: block;
+    position: relative;
+    margin-top: 24px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+#proyectos > a .imagen-proyecto {
+    display: block;
+}
+
+#contacto {
+    background-color: #12243A;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-contenido {
+    width: min(100%, 850px);
+    margin: 0 auto;
+}
+
+.contacto-titulo {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+}
+
+.contacto-texto {
+    margin: 16px 0 32px;
+    color: #CBD5E1;
+    font-size: 1.1rem;
+}
+
+.formulario-reunion {
+    padding: 32px;
+    border: 1px solid rgba(147, 197, 253, 0.3);
+    border-radius: 16px;
+    background-color: #0F172A;
+}
+
+.campos-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-formulario label {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    outline: none;
+    background-color: #12243A;
+    color: #ffffff;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    border-color: #93C5FD;
+    box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.18);
+}
+
+.campo-formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo-mensaje {
+    grid-column: 1 / -1;
+}
+
+.boton-reunion {
+    margin-top: 24px;
+    padding: 13px 20px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #93C5FD;
+    color: #0F172A;
+    font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton-reunion:hover {
+    transform: translateY(-2px);
+    background-color: #BFDBFE;
+}
+
+.descripcion-proyecto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background: rgba(15, 23, 42, 0.9);
+    color: white;
+
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+#proyectos > a:hover .descripcion-proyecto {
+    transform: translateY(0);
+}
+
+body.modo-claro {
+    background-color: #E2E8F0;
+    color: #0F172A;
+    color-scheme: light;
+}
+
+body.modo-claro .barra-navegacion,
+body.modo-claro .footer-principal,
+body.modo-claro .skill-card,
+body.modo-claro .formulario-reunion {
+    background-color: #FFFFFF;
+}
+
+body.modo-claro .barra-navegacion a,
+body.modo-claro .footer-principal,
+body.modo-claro .boton-tema,
+body.modo-claro .skill-card,
+body.modo-claro .campo-formulario label {
+    color: #0F172A;
+}
+
+body.modo-claro .boton-tema {
+    border-color: #64748B;
+}
+
+body.modo-claro .icono-tema {
+    filter: none;
+}
+
+body.modo-claro .boton-tema:hover {
+    background-color: #DBEAFE;
+}
+
+body.modo-claro #yo,
+body.modo-claro #habilidades,
+body.modo-claro #proyectos,
+body.modo-claro #contacto {
+    background-color: #F8FAFC;
+}
+
+body.modo-claro .hero-name,
+body.modo-claro .skills-title,
+body.modo-claro .titulo-proyectos,
+body.modo-claro .contacto-titulo {
+    color: #0F172A !important;
+}
+
+body.modo-claro .skills-eyebrow,
+body.modo-claro #sobre-mi,
+body.modo-claro .skill-number {
+    color: #2563EB;
+}
+
+body.modo-claro .skill-card,
+body.modo-claro .formulario-reunion {
+    border-color: #BFDBFE;
+}
+
+body.modo-claro .skill-card .card-text,
+body.modo-claro .contacto-texto {
+    color: #475569;
+}
+
+body.modo-claro .campo-formulario input,
+body.modo-claro .campo-formulario select,
+body.modo-claro .campo-formulario textarea {
+    border-color: #CBD5E1;
+    background-color: #FFFFFF;
+    color: #0F172A;
+}
+
+body.modo-claro .descripcion-proyecto {
+    background: rgba(255, 255, 255, 0.92);
+    color: #0F172A;
+}
+
+body.modo-claro .icono-instagram,
+body.modo-claro .icono-github,
+body.modo-claro .icono-linkedin {
+    filter: none;
+}
