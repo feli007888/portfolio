@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #12243A;
+    background-color: #0F172A;
 }
 
 .barra-navegacion {
@@ -85,6 +85,8 @@ img {
 section {
     min-height: 100vh;
     padding: 50px;
+    margin: 0 24px 24px;
+    border-radius: 24px;
 }
 
 #yo {
@@ -92,6 +94,83 @@ section {
 }
 #s {
     background-color: #12243A;
+}
+
+.skills-section {
+    display: flex;
+    align-items: center;
+}
+
+.skills-eyebrow {
+    margin: 0 0 8px;
+    color: #93C5FD;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.skills-title {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+}
+
+.skill-card {
+    overflow: hidden;
+    border: 1px solid rgba(147, 197, 253, 0.3);
+    border-radius: 16px;
+    background-color: #0F172A;
+    color: #ffffff;
+    box-shadow: none;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: #93C5FD;
+}
+
+.skill-card .card-body {
+    min-height: 210px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-number {
+    color: #93C5FD;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.skill-card .card-title {
+    margin: auto 0 10px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.skill-card .card-text {
+    margin: 0;
+    color: #CBD5E1;
+    line-height: 1.6;
+}
+
+@media (max-width: 767.98px) {
+    section {
+        margin: 0 12px 12px;
+        border-radius: 16px;
+    }
+
+    .skills-section {
+        padding: 50px 24px;
+    }
+
+    .skill-card .card-body {
+        min-height: 180px;
+    }
 }
 
 #proyectos {
@@ -102,12 +181,3 @@ section {
     background-color: #12243A;
 }
 
-
-section + section::before {
-    content: "";
-    display: block;
-    width: 60%;
-    height: 4px;
-    margin: 0 auto 50px;
-    background-color: #0F172A;
-}
