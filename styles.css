@@ -1,3 +1,21 @@
+:root {
+    --color-fondo-oscuro: #0F172A;
+    --color-superficie-oscura: #12243A;
+    --color-navegacion: #1E293B;
+    --color-primario: #93C5FD;
+    --color-primario-claro: #BFDBFE;
+    --color-texto-claro: #FFFFFF;
+    --color-texto-secundario: #CBD5E1;
+    --color-borde-oscuro: #334155;
+    --color-fondo-claro: #E2E8F0;
+    --color-superficie-clara: #F8FAFC;
+    --color-texto-oscuro: #0F172A;
+    --color-texto-secundario-oscuro: #475569;
+    --color-acento-claro: #2563EB;
+    --color-borde-claro: #64748B;
+    --color-resaltado-claro: #DBEAFE;
+}
+
 html,
 body {
     min-height: 100%;
@@ -11,12 +29,12 @@ body {
 }
 
 body.modo-oscuro {
-    background-color: #0F172A;
+    background-color: var(--color-fondo-oscuro);
     color-scheme: dark;
 }
 
 .barra-navegacion {
-    background-color: #1E293B;
+    background-color: var(--color-navegacion);
     padding: 25px;
     text-align: center;
     width: fit-content;
@@ -26,7 +44,7 @@ body.modo-oscuro {
 }
 
 .barra-navegacion a {
-    color: white;
+    color: var(--color-texto-claro);
     margin: 0 16px;
     text-decoration: none;
 }
@@ -41,7 +59,7 @@ body.modo-oscuro {
     border: 1px solid rgba(147, 197, 253, 0.45);
     border-radius: 10px;
     background: transparent;
-    color: #ffffff;
+    color: var(--color-texto-claro);
     font: inherit;
     font-size: 0.9rem;
     display: inline-flex;
@@ -54,7 +72,7 @@ body.modo-oscuro {
 }
 
 .boton-tema:focus-visible {
-    outline: 3px solid #93C5FD;
+    outline: 3px solid var(--color-primario);
     outline-offset: 3px;
 }
 
@@ -70,8 +88,8 @@ footer {
 }
 
 .footer-principal {
-    background-color: #0F172A;
-    color: #ffffff;
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
 }
 
 .imagen-principal {
@@ -92,7 +110,7 @@ footer {
 
 #sobre-mi {
     margin: 0;
-    color: #93C5FD;
+    color: var(--color-primario);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -128,7 +146,7 @@ img {
 
 .titulo-proyectos {
     margin: 0;
-    color: #ffffff;
+    color: var(--color-texto-claro);
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 700;
 }
@@ -141,10 +159,10 @@ section {
 }
 
 #yo {
-    background-color: #12243A;
+    background-color: var(--color-superficie-oscura);
 }
 #habilidades {
-    background-color: #12243A;
+    background-color: var(--color-superficie-oscura);
 }
 
 .habilidades{
@@ -154,7 +172,7 @@ section {
 
 .skills-eyebrow {
     margin: 0 0 8px;
-    color: #93C5FD;
+    color: var(--color-primario);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -163,7 +181,7 @@ section {
 
 .skills-title {
     margin: 0;
-    color: #ffffff;
+    color: var(--color-texto-claro);
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 700;
 }
@@ -172,15 +190,15 @@ section {
     overflow: hidden;
     border: 1px solid rgba(147, 197, 253, 0.3);
     border-radius: 16px;
-    background-color: #0F172A;
-    color: #ffffff;
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
     box-shadow: none;
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .skill-card:hover {
     transform: translateY(-8px);
-    border-color: #93C5FD;
+    border-color: var(--color-primario);
 }
 
 .skill-card .card-body {
@@ -191,7 +209,7 @@ section {
 }
 
 .skill-number {
-    color: #93C5FD;
+    color: var(--color-primario);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -205,12 +223,12 @@ section {
 
 .skill-card .card-text {
     margin: 0;
-    color: #CBD5E1;
+    color: var(--color-texto-secundario);
     line-height: 1.6;
 }
 
 #proyectos {
-    background-color: #12243A;
+    background-color: var(--color-superficie-oscura);
 }
 
 #proyectos > a {
@@ -226,7 +244,7 @@ section {
 }
 
 #contacto {
-    background-color: #12243A;
+    background-color: var(--color-superficie-oscura);
     display: flex;
     align-items: center;
 }
@@ -238,14 +256,14 @@ section {
 
 .contacto-titulo {
     margin: 0;
-    color: #ffffff;
+    color: var(--color-texto-claro);
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 700;
 }
 
 .contacto-texto {
     margin: 16px 0 32px;
-    color: #CBD5E1;
+    color: var(--color-texto-secundario);
     font-size: 1.1rem;
 }
 
@@ -253,7 +271,7 @@ section {
     padding: 32px;
     border: 1px solid rgba(147, 197, 253, 0.3);
     border-radius: 16px;
-    background-color: #0F172A;
+    background-color: var(--color-fondo-oscuro);
 }
 
 .campos-formulario {
@@ -269,7 +287,7 @@ section {
 }
 
 .campo-formulario label {
-    color: #ffffff;
+    color: var(--color-texto-claro);
     font-weight: 600;
 }
 
@@ -278,17 +296,17 @@ section {
 .campo-formulario textarea {
     width: 100%;
     padding: 12px 14px;
-    border: 1px solid #334155;
+    border: 1px solid var(--color-borde-oscuro);
     border-radius: 10px;
     outline: none;
-    background-color: #12243A;
-    color: #ffffff;
+    background-color: var(--color-superficie-oscura);
+    color: var(--color-texto-claro);
 }
 
 .campo-formulario input:focus,
 .campo-formulario select:focus,
 .campo-formulario textarea:focus {
-    border-color: #93C5FD;
+    border-color: var(--color-primario);
     box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.18);
 }
 
@@ -306,15 +324,15 @@ section {
     padding: 13px 20px;
     border: 0;
     border-radius: 10px;
-    background-color: #93C5FD;
-    color: #0F172A;
+    background-color: var(--color-primario);
+    color: var(--color-texto-oscuro);
     font-weight: 700;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .boton-reunion:hover {
     transform: translateY(-2px);
-    background-color: #BFDBFE;
+    background-color: var(--color-primario-claro);
 }
 
 .descripcion-proyecto {
@@ -326,7 +344,7 @@ section {
     box-sizing: border-box;
 
     background: rgba(15, 23, 42, 0.9);
-    color: white;
+    color: var(--color-texto-claro);
 
     transform: translateY(100%);
     transition: transform 0.3s ease;
@@ -337,8 +355,8 @@ section {
 }
 
 body.modo-claro {
-    background-color: #E2E8F0;
-    color: #0F172A;
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto-oscuro);
     color-scheme: light;
 }
 
@@ -346,7 +364,7 @@ body.modo-claro .barra-navegacion,
 body.modo-claro .footer-principal,
 body.modo-claro .skill-card,
 body.modo-claro .formulario-reunion {
-    background-color: #FFFFFF;
+    background-color: var(--color-texto-claro);
 }
 
 body.modo-claro .barra-navegacion a,
@@ -354,11 +372,11 @@ body.modo-claro .footer-principal,
 body.modo-claro .boton-tema,
 body.modo-claro .skill-card,
 body.modo-claro .campo-formulario label {
-    color: #0F172A;
+    color: var(--color-texto-oscuro);
 }
 
 body.modo-claro .boton-tema {
-    border-color: #64748B;
+    border-color: var(--color-borde-claro);
 }
 
 body.modo-claro .icono-tema {
@@ -366,50 +384,50 @@ body.modo-claro .icono-tema {
 }
 
 body.modo-claro .boton-tema:hover {
-    background-color: #DBEAFE;
+    background-color: var(--color-resaltado-claro);
 }
 
 body.modo-claro #yo,
 body.modo-claro #habilidades,
 body.modo-claro #proyectos,
 body.modo-claro #contacto {
-    background-color: #F8FAFC;
+    background-color: var(--color-superficie-clara);
 }
 
 body.modo-claro .hero-name,
 body.modo-claro .skills-title,
 body.modo-claro .titulo-proyectos,
 body.modo-claro .contacto-titulo {
-    color: #0F172A !important;
+    color: var(--color-texto-oscuro) !important;
 }
 
 body.modo-claro .skills-eyebrow,
 body.modo-claro #sobre-mi,
 body.modo-claro .skill-number {
-    color: #2563EB;
+    color: var(--color-acento-claro);
 }
 
 body.modo-claro .skill-card,
 body.modo-claro .formulario-reunion {
-    border-color: #BFDBFE;
+    border-color: var(--color-primario-claro);
 }
 
 body.modo-claro .skill-card .card-text,
 body.modo-claro .contacto-texto {
-    color: #475569;
+    color: var(--color-texto-secundario-oscuro);
 }
 
 body.modo-claro .campo-formulario input,
 body.modo-claro .campo-formulario select,
 body.modo-claro .campo-formulario textarea {
-    border-color: #CBD5E1;
-    background-color: #FFFFFF;
-    color: #0F172A;
+    border-color: var(--color-texto-secundario);
+    background-color: var(--color-texto-claro);
+    color: var(--color-texto-oscuro);
 }
 
 body.modo-claro .descripcion-proyecto {
     background: rgba(255, 255, 255, 0.92);
-    color: #0F172A;
+    color: var(--color-texto-oscuro);
 }
 
 body.modo-claro .icono-instagram,
