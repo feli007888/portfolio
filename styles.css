@@ -1,3 +1,4 @@
+/* colores tanto para el tema claro como oscuro */
 :root {
     --color-fondo-oscuro: #0F172A;
     --color-superficie-oscura: #12243A;
@@ -18,21 +19,25 @@
 
 html,
 body {
+    
     min-height: 100%;
     
 }
 
 body {
+    /* mantiene el footer abajo de todo */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 body.modo-oscuro {
+    /* tema predeterminado de la pagina */
     background-color: var(--color-fondo-oscuro);
     color-scheme: dark;
 }
 
+/* navbar */
 .barra-navegacion {
     background-color: var(--color-navegacion);
     padding: 25px;
@@ -72,11 +77,13 @@ body.modo-oscuro {
 }
 
 .boton-tema:focus-visible {
+    
     outline: 3px solid var(--color-primario);
     outline-offset: 3px;
 }
 
 .icono-tema {
+    /* hace que el logo se vea en el tema oscuro */
     width: 16px;
     height: 16px;
     margin-right: 4px;
@@ -84,6 +91,7 @@ body.modo-oscuro {
 }
 
 footer {
+    
     margin-top: auto;
 }
 
@@ -92,6 +100,7 @@ footer {
     color: var(--color-texto-claro);
 }
 
+/* tamaños de las imagenes */
 .imagen-principal {
     width: 100%;
     height: 500px;
@@ -100,6 +109,7 @@ footer {
 }
 
 .hero-name {
+    
     font-size: clamp(4.5rem, 10vw, 9rem);
     margin-left: 80px;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -165,6 +175,7 @@ section {
     background-color: var(--color-superficie-oscura);
 }
 
+/* alinea las habilidades*/
 .habilidades{
     display: flex;
     align-items: center;
@@ -186,6 +197,7 @@ section {
     font-weight: 700;
 }
 
+/* cards habilidades*/
 .skill-card {
     overflow: hidden;
     border: 1px solid rgba(147, 197, 253, 0.3);
@@ -197,6 +209,7 @@ section {
 }
 
 .skill-card:hover {
+    /* animacion pasar el mouse por arriba */
     transform: translateY(-8px);
     border-color: var(--color-primario);
 }
@@ -231,6 +244,7 @@ section {
     background-color: var(--color-superficie-oscura);
 }
 
+/* proyectos */
 #proyectos > a {
     display: block;
     position: relative;
@@ -243,6 +257,7 @@ section {
     display: block;
 }
 
+/* formulario de contacto */
 #contacto {
     background-color: var(--color-superficie-oscura);
     display: flex;
@@ -275,6 +290,7 @@ section {
 }
 
 .campos-formulario {
+    
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
@@ -316,6 +332,7 @@ section {
 }
 
 .campo-mensaje {
+    
     grid-column: 1 / -1;
 }
 
@@ -336,6 +353,7 @@ section {
 }
 
 .descripcion-proyecto {
+    /* descripcion de los proyectos */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -354,6 +372,7 @@ section {
     transform: translateY(0);
 }
 
+/* modo claro. */
 body.modo-claro {
     background-color: var(--color-fondo-claro);
     color: var(--color-texto-oscuro);
